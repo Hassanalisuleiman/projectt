@@ -1,12 +1,89 @@
+
 <!DOCTYPE html>
 <html>
     <head>
         <title></title>
-       
+        <style>
+          .container{
+    width: 100%;
+    height: 100%;
+    background-image: url('sun.jpg');
+    background-position: center;
+    background-size: cover;
+    position: absolute;    
+} 
+h1{
+    font-family: sans-serif;
+}
+.fom{
+    text-align: center;
+    margin-bottom: 50%;
+    margin-top: 3cm;
+    margin-left: auto;
+    margin-right: auto;
+    border:2px solid white;
+    width: 40%;
+    border-radius: 13px;
+}
+label{
+    font-family: sans-serif;
+    color: whitesmoke;
+    
+}
+input{
+    width: 50%;
+    height: 30px;
+}
+div{
+    margin: 10px;
+}
+
+        </style>
+        <script type="text/javascript">
+            function fom(event){
+                event.preventDefault();
+                
+               let nam =document.querySelector("#name").value; 
+               let em =document.querySelector("#email").value; 
+               let pass =document.querySelector("#password").value; 
+                
+               
+
+               localStorage.setItem('name',nam);
+               
+               console.log('nafika');
+               localStorage.setItem('mail',em);
+               localStorage.setItem('pas',pass);
+           }
+        </script>
     </head>
     <body>
-        
         <div class="container">
+            <form class="fom" onsubmit="fom(event)">
+                <h1>login</h1>
+                <div>
+                    <div>
+                        <label>Name</label><br>
+                        <input type="text" id="name" required>
+                    </div>
+                
+                    <div>
+                        <label>email</label><br>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div>
+                        <label>password</label><br>
+                        <input type="number" id="password" required>
+                    
+                    </div>
+                    <div>
+                        <input style="width: 70px;" type="submit" value="submit"/>
+                        <button><a href="projectt.html">login</a></button>
+                    </div>
+                </div>
+            
+            </form>
+             <div>
             
             <h1>Hassan CV</h1>
         <h1>Persinal information</h1>
@@ -83,6 +160,7 @@
             <tr><th>Gmail :</th><td>hassanalisuleiman49@gmail.com</td></tr>
         </table>
         <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d6372.936690980585!2d39.206665!3d-6.223991!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2stz!4v1683104944188!5m2!1sen!2stz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
         </div>
     </body>
 </html>
